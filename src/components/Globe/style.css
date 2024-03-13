@@ -1,0 +1,47 @@
+.globe{
+    background: linear-gradient(to bottom, #fff, #ffffff00);
+}
+
+.absCenter{
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.rotateCenter {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    animation-duration: 20s;
+    animation: rotate infinite linear; /* Applying the rotate animation infinitely */
+}
+
+@keyframes rotate {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+.waveCenter {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    animation: wave infinite linear 4s;
+}
+
+@keyframes wave {
+    0% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    } 
+    80% {
+        opacity: 1;
+    } 
+    100% {
+        transform: translate(-50%, -50%) scale(1.8);
+        opacity: 0;
+    }
+}
